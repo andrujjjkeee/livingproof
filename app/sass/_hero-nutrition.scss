@@ -1,0 +1,170 @@
+@media (max-width: 767px) {
+  .hero-nutrition {
+    background: url(../img/hero-nutrition-mobile.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+  }
+}
+
+.hero-nutrition {
+  margin-bottom: 1px;
+
+  &__layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 320px;
+    height: inherit;
+    padding: 25px;
+  }
+
+  &__text{
+    @include roboto;
+    font-size: 15px;
+    line-height: 22px;
+
+    h1{
+      margin-bottom: 18px;
+      color: #f15c22;
+      @include quicksand;
+      font-size: 45px;
+      line-height: 1;
+      font-weight: bold;
+    }
+
+    p{
+      max-width: 425px;
+      margin-bottom: 10px;
+
+      &:first-of-type {
+        @include quicksand;
+        letter-spacing: .5px;
+      }
+
+    }
+
+  }
+
+  &__background{
+    display: none;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .hero-nutrition {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero-nutrition {
+    position: relative;
+    margin-bottom: 46px;
+
+    &__layout{
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+      padding-top: 127px;
+      padding-bottom: 8px;
+    }
+
+    &__text{
+
+      h1{
+        max-width: 470px;
+      }
+
+      p{
+        font-size: 18px;
+        line-height: 24px;
+
+        &:first-of-type {
+          font-size: 22px;
+          line-height: 28px;
+        }
+
+      }
+
+    }
+
+    &__background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      min-width: 1440px;
+      max-height: 800px;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+
+      img{
+        margin-top: -145px;
+      }
+
+      svg{
+        position: absolute;
+        bottom: -122px;
+        left: 0;
+        z-index: 2;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero-nutrition {
+
+    &__text{
+
+      h1{
+        max-width: 847px;
+        font-size: 85px;
+        line-height: 85px;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero-nutrition {
+    margin-bottom: .46em;
+
+    &__layout{
+      padding-top: 1.27em;
+      padding-bottom: .08em;
+    }
+
+    &__text{
+
+      h1{
+        margin-bottom: .21em;
+        line-height: 1em;
+      }
+
+    }
+
+    &__background {
+
+      img{
+        margin-top: -1.45em;
+      }
+
+      svg{
+        bottom: -1.22em;
+      }
+
+    }
+
+  }
+}

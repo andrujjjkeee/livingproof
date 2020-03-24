@@ -1,0 +1,7 @@
+[04-Dec-2018 00:14:55 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/livingp1/public_html/site/dist/wp-content/themes/livingproof/404.php on line 3
+[04-Dec-2018 00:14:58 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/livingp1/public_html/site/dist/wp-content/themes/livingproof/search.php on line 1
+[07-Dec-2018 11:13:18 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/livingp1/public_html/site/dist/wp-content/themes/livingproof/index.php on line 2
+[04-Jan-2019 20:38:49 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/livingp1/public_html/site/dist/wp-content/themes/livingproof/index.php on line 2
+[11-Feb-2019 20:06:57 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/livingp1/public_html/site/dist/wp-content/themes/livingproof/index.php on line 2
+[14-Feb-2019 11:19:50 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/livingp1/public_html/site/dist/wp-content/themes/livingproof/index.php on line 2
+[27-Feb-2019 08:23:50 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/livingp1/public_html/site/dist/wp-content/themes/livingproof/index.php on line 2

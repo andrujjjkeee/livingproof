@@ -1,0 +1,148 @@
+.programs {
+  margin-bottom: 60px;
+  padding: 0 25px;
+
+  &__title{
+    margin-bottom: 50px;
+    @include quicksand;
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__catalog{
+
+  }
+
+  &__item{
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 22px;
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,0.13);
+    background-color: #fff;
+  }
+
+  &__info{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F15C22;
+    @include quicksand;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+
+    .btn{
+      margin: 15px 0 0;
+    }
+
+  }
+
+  &__content{
+    @include roboto;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__topic{
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  &__price{
+    margin-bottom: 8px;
+    color: #F15C22;
+    font-size: 18px;
+  }
+
+  &__text{
+
+    strong{
+      color: #F15C22;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .programs {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .programs {
+    margin-bottom: 130px;
+
+    &__title {
+      font-size: 50px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    &__item{
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 50px 50px 50px 60px;
+    }
+
+    &__info{
+      width: 223px;
+      margin: 0;
+      padding-right: 28px;
+      border-bottom: none;
+      border-right: 1px solid #F15C22;
+      font-size: 18px;
+      line-height: 22px;
+
+      .btn{
+        margin-top: 30px;
+      }
+
+    }
+
+    &__content{
+      width: calc( 100% - 270px );
+      column-count: 2;
+      column-gap: 40px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__topic{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    &__price{
+      margin-bottom: 18px;
+      font-size: 30px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .programs {
+    max-width: 1170px;
+    margin: 0 auto 130px;
+
+  }
+}
+@media (min-width: $desktop) {
+  .programs {
+
+    &__item{
+      transition: box-shadow .3s ease;
+
+      &:hover{
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0,.15);
+      }
+
+    }
+
+  }
+}
+

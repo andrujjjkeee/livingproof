@@ -1,0 +1,230 @@
+.subscribe {
+  margin-bottom: 25px;
+  padding: 0 25px;
+
+  &__wrap{
+    position: relative;
+    max-width: 406px;
+    margin: 0 auto;
+    padding: 23px;
+    border-radius: 12px;
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,.13);
+    overflow: hidden;
+    transition: box-shadow .3s ease;
+  }
+
+  &__text{
+    margin-bottom: 25px;
+    @include roboto;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+      width: 100%;
+    }
+
+    .wpcf7-validation-errors,
+    .wpcf7-spam-blocked,
+    .wpcf7-mail-sent-ok{
+      display: none!important;
+    }
+
+    .wpcf7-not-valid{
+      border-color: #FF798A;
+    }
+
+    span.wpcf7-not-valid-tip{
+      position: absolute;
+      top: calc( 100% - 20px );
+      left: 0;
+      @include roboto;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FF798A;
+      text-align: left;
+    }
+
+    input{
+      width: 100%;
+      height: 37px;
+      margin-bottom: 24px;
+      padding: 0 20px;
+      border: 1px solid #F15C22;
+      border-radius: 25px;
+      color: #000;
+      @include roboto;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: .5px;
+    }
+
+    button{
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      padding: 0 33px;
+      border: 2px solid #f15c22;
+      border-radius: 50px;
+      background-color: #f15c22;
+      @include quicksand;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+      text-align: center;
+      transition: background-color .3s ease;
+    }
+
+  }
+
+  &.is-active{
+
+    .subscribe__wrap{
+      box-shadow: 0 10px 20px 0 rgba(241,92,34,.13);
+      transition: box-shadow .3s ease .6s;
+    }
+
+  }
+
+  .preload-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    &.is-show{
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .subscribe {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .subscribe {
+
+    &__wrap{
+      max-width: 100%;
+      padding: 53px 56px 52px;
+    }
+
+    &__text{
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    $form-height: 53px;
+
+    form{
+      position: relative;
+      width: 434px;
+      height: $form-height;
+      margin: 0 auto;
+
+      input{
+        height: $form-height;
+        margin-bottom: 0;
+        padding: 0 205px 0 28px;
+        font-size: 18px;
+      }
+
+      button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding: 0 47px;
+        font-size: 18px;
+      }
+
+      span.wpcf7-not-valid-tip{
+        left: 28px;
+      }
+
+      span.wpcf7-not-valid-tip{
+        top: calc( 100% + 5px );
+        left: 26px;
+        text-align: left;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .subscribe {
+    max-width: 1170px;
+    margin: 0 auto 25px;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__text{
+      width: calc( 100% - 500px );
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    form{
+      margin: 0 0 1px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .subscribe {
+
+    form button{
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: rgba(241,92,34,.5) solid 6px;
+        border-radius: inherit;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+      }
+
+      &:hover {
+
+        &:before{
+          -webkit-animation-name: hvr-ripple-out;
+          animation-name: hvr-ripple-out;
+        }
+
+      }
+
+    }
+
+  }
+}
+

@@ -1,0 +1,158 @@
+@media (max-width: 767px) {
+  .nutrition-programs {
+    background: url(../img/nutrition-programs-background-mobile.jpg) no-repeat center center;
+    background-size: auto 100%;
+  }
+}
+
+.nutrition-programs {
+  padding: 100px 25px 80px;
+
+  &__text{
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+
+    h2{
+      margin-bottom: 20px;
+      @include quicksand;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1;
+    }
+
+    p{
+      margin-bottom: 24px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+  &__background {
+    display: none;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .nutrition-programs {
+
+    &__text{
+      max-width: 50%;
+      margin: 0 auto;
+    }
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .nutrition-programs {
+    position: relative;
+    padding: 104px 25px 110px;
+    background: transparent;
+
+    &__text{
+      max-width: 805px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 24px;
+
+      h2{
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+    }
+
+    &__background{
+      display: block;
+      position: absolute;
+      top: -525px;
+      left: 50%;
+      width: 100%;
+      min-width: 1220px;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+
+      &:before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1023px;
+        height: 1023px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        transform: translate(-50%, -28%);
+        box-sizing: border-box;
+        z-index: 1;
+        content: '';
+      }
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+
+      svg{
+        position: absolute;
+        left: 0;
+        z-index: 2;
+
+        &:first-child{
+          top: -228px;
+        }
+
+        &:last-child{
+          bottom: -340px;
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .nutrition-programs {
+
+  }
+}
+@media (min-width: $desktop) {
+  .nutrition-programs {
+    padding-top: 1.04em;
+    padding-bottom: 1.10em;
+
+    &__background{
+      top: -5.25em;
+
+      &:before{
+        width: 10.23em;
+        height: 10.23em;
+      }
+
+      svg{
+
+        &:first-child{
+          top: -2.28em;
+        }
+
+        &:last-child{
+          bottom: -3.4em;
+        }
+
+      }
+
+    }
+
+  }
+}

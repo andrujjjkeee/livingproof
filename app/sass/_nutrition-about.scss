@@ -1,0 +1,119 @@
+.nutrition-about {
+  margin-bottom: 60px;
+  padding: 0 25px;
+  @include roboto;
+  font-size: 16px;
+  line-height: 24px;
+
+  p{
+    margin-bottom: 19px;
+  }
+
+  &__video{
+    display: block;
+    position: relative;
+    max-width: 396px;
+    margin: 0 auto 30px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.33);
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+    i{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: #f15c22;
+      transform: translate(-50%, -50%);
+
+      svg {
+        width: 12px;
+        height: 12px;
+        fill: #fff;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .nutrition-about {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .nutrition-about {
+    max-width: 854px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+
+    &__video{
+      float: left;
+      width: 50%;
+      margin: 0 30px 0 0;
+
+      i {
+        width: 81px;
+        height: 81px;
+
+        svg {
+          position: relative;
+          left: 1px;
+          width: 25px;
+          height: 25px;
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .nutrition-about {
+
+  }
+}
+@media (min-width: $desktop) {
+  .nutrition-about {
+
+    &__video {
+
+      i {
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 1200px;
+          height: 1200px;
+          border-radius: 50%;
+          background-color: rgba(241, 92, 34, 0.5);
+          transform: translate(-50%, -50%) scale(0);
+          transition: transform 1s ease;
+        }
+
+      }
+
+      &:hover i:before{
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 2s ease;
+      }
+
+    }
+
+  }
+}
+

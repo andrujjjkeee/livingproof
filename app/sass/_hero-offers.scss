@@ -1,0 +1,277 @@
+@media (max-width: 767px) {
+  .hero-offers {
+    background: url(../img/hero-offers-mobile.jpg) no-repeat 50% 0;
+    background-size: auto 100%;
+  }
+}
+
+.hero-offers {
+  margin-bottom: 1px;
+
+  &__price{
+    display: flex;
+    align-items: center;
+    height: 68px;
+    margin-bottom: 19px;
+    padding: 11px 0 12px 21px;
+    color: #fff;
+    @include quicksand;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 45px;
+    background-color: #F15C22;
+    white-space: nowrap;
+
+    span{
+
+      &:nth-child(1){
+        margin: 0 11px 0 14px;
+      }
+      &:nth-child(2){
+        display: flex;
+        align-items: center;
+        height: 68px;
+        margin: -11px 0 -12px;
+        padding: 11px 28px 12px 24px;
+        background-color: #fff;
+        color: #F15C22;
+        text-decoration: line-through;
+      }
+
+    }
+
+  }
+
+  &__layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 320px;
+    height: inherit;
+    padding: 25px;
+  }
+
+  &__text{
+    margin-bottom: 14px;
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+
+    h1{
+      margin-bottom: 8px;
+      @include quicksand;
+      font-size: 45px;
+      line-height: 1;
+      font-weight: bold;
+
+      & + p{
+        @include quicksand;
+        font-weight: bold;
+        letter-spacing: .5px;
+      }
+
+    }
+
+    p{
+      margin-bottom: 10px;
+    }
+
+    li{
+      position: relative;
+      padding-left: 26px;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #F15C22;
+      }
+
+    }
+
+  }
+
+  &__expire{
+    margin-bottom: 29px;
+    @include quicksand;
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: bold;
+    letter-spacing: .5px;
+
+    span{
+      margin-left: 8px;
+      color: #F15C22;
+      font-size: 22px;
+      line-height: 43px;
+    }
+
+  }
+
+  &__background{
+    display: none;
+  }
+
+  .btn{
+    margin: 0;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .hero-offers {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero-offers {
+    position: relative;
+    margin-bottom: 159px;
+
+    &__price {
+      font-size: 36px;
+
+      span {
+
+        &:nth-child(2){
+          width: 115px;
+        }
+
+      }
+
+    }
+
+    &__layout{
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+      padding-top: 112px;
+      padding-bottom: 8px;
+    }
+
+    &__text{
+      font-size: 18px;
+      line-height: 24px;
+
+      h1{
+        max-width: 470px;
+
+        + p {
+          font-size: 22px;
+          line-height: 28px;
+        }
+
+      }
+
+      p{
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+    }
+
+    &__expire{
+      font-size: 22px;
+
+      span{
+        font-size: 34px;
+      }
+
+    }
+
+    &__background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      min-width: 1440px;
+      max-height: 800px;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+
+      img{
+        margin-top: -145px;
+      }
+
+      svg{
+        position: absolute;
+        bottom: -263px;
+        left: 0;
+        z-index: 2;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero-offers {
+
+    &__text{
+
+      h1{
+        max-width: 847px;
+        font-size: 85px;
+        line-height: 85px;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero-offers {
+    margin-bottom: 1.59em;
+
+    &__layout{
+      padding-top: 1.12em;
+      padding-bottom: .08em;
+    }
+
+    &__text{
+
+      h1{
+        margin-bottom: .1em;
+        line-height: 1em;
+      }
+
+    }
+
+    &__background {
+
+      img{
+        margin-top: -1.45em;
+      }
+
+      svg{
+        bottom: -2.63em;
+      }
+
+    }
+
+  }
+}
+
+@media (min-width: $tablet-landscape) and (-ms-high-contrast: none) {
+  *::-ms-backdrop, .hero-offers__background {
+    overflow: hidden;
+
+    svg{
+      display: none;
+    }
+
+  }
+}

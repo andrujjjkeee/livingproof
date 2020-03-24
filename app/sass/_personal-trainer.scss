@@ -1,0 +1,187 @@
+.personal-trainer {
+  margin-bottom: 65px;
+  padding: 0 25px;
+
+  &__title{
+    margin-bottom: 60px;
+    @include quicksand;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__wrap{
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+
+  &__item{
+    width: 100%;
+    max-width: 346px;
+    margin-bottom: 41px;
+    padding: 22px 0 17px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+    line-height: 20px;
+    background-color: #fff;
+    text-align: center;
+
+    .btn{
+      margin: 0 auto;
+    }
+
+  }
+
+  &__name{
+    margin-bottom: -15px;
+    @include quicksand;
+    font-size: 22px;
+  }
+
+  &__post{
+    margin-bottom: 19px;
+    color: #F15C22;
+    @include quicksand;
+    font-size: 16px;
+    white-space: pre-line;
+
+    span{
+      position: relative;
+      padding-right: 10px;
+      margin-right: 10px;
+
+      &:before{
+        position: absolute;
+        top: 10px;
+        left: calc( 100% - 2px );
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: #F15C22;
+        content: '';
+      }
+
+      &:first-of-type{
+        display: block;
+        margin-right: 0;
+        padding-right: 0;
+
+        &:before{
+          display: none;
+        }
+
+      }
+
+      &:last-of-type{
+        margin-right: 0;
+        padding-right: 0;
+
+        &:before{
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 281px;
+    margin-bottom: 17px;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .personal-trainer {
+
+    &__wrap{
+
+      ul{
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content: center;
+      }
+
+    }
+
+    &__post{
+      min-height: 60px;
+    }
+
+    &__item{
+      margin: 0 15px 41px;
+    }
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .personal-trainer {
+
+    &__title{
+      max-width: 830px;
+      margin: 0 auto 67px;
+      font-size: 50px;
+      line-height: 50px;
+      letter-spacing: .1px;
+    }
+
+    &__wrap{
+      max-width: 1143px;
+      margin: 0 auto;
+
+      ul{
+        margin: 0 -15px;
+      }
+
+    }
+
+    &__name{
+      font-size: 24px;
+    }
+
+    &__post{
+      font-size: 18px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .personal-trainer {
+
+  }
+}
+@media (min-width: $desktop) {
+  .personal-trainer {
+
+    &__item{
+      margin: 0 calc((33.33% - 350px )/2) 41px;
+      transition: box-shadow .3s ease;
+
+      &:hover{
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0,.25);
+      }
+
+    }
+
+  }
+}
+

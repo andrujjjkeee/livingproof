@@ -1,0 +1,106 @@
+.our-studio {
+  position: relative;
+  min-height: 545px;
+  margin-bottom: 60px;
+  padding: 18px 25px 0;
+
+  &__content{
+    max-width: 288px;
+    margin: -60px auto 0;
+    color: #fff;
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+
+    h2{
+      margin-bottom: 20px;
+      color: #F15C22;
+      @include quicksand;
+      font-size: 25px;
+      line-height: 33px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    p{
+      margin-bottom: 24px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+  &__background{
+    display: block;
+    position: absolute;
+    top: -151px;
+    left: 50%;
+    width: 100%;
+    min-width: 1440px;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+
+    img, svg {
+      display: block;
+      width: 100%;
+    }
+
+    svg{
+      position: absolute;
+      bottom: -372px;
+      left: 0;
+      z-index: 2;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .our-studio {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .our-studio {
+    min-height: 550px;
+    margin-bottom: 107px;
+
+    &__content {
+      max-width: 805px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 24px;
+
+      h2 {
+        margin-bottom: 30px;
+        font-size: 50px;
+        line-height: 1;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .our-studio {
+
+  }
+}
+@media (min-width: $desktop) {
+  .our-studio {
+    margin-bottom: .28em;
+    padding-top: .18em;
+
+    &__background{
+      top: -1.65em;
+    }
+
+  }
+}
+

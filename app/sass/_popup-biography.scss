@@ -1,0 +1,123 @@
+.popup__biography {
+  text-align: center;
+
+  &-content {
+    width: 100%;
+    max-width: 670px;
+    padding: 0 25px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: opacity .3s ease;
+  }
+
+  &-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 95px;
+    top: -37px;
+    height: 95px;
+    margin: 0 auto -7px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+
+  }
+
+  &-name{
+    margin-bottom: 7px;
+    @include quicksand;
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: bold;
+  }
+
+  &-position{
+    margin-bottom: 20px;
+    color: #F15C22;
+    @include quicksand;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+
+    span{
+      position: relative;
+      padding-left: 8px;
+      margin-left: 8px;
+
+      &:before{
+        position: absolute;
+        top: 10px;
+        right: calc( 100% - 2px);
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: #F15C22;
+        content: '';
+      }
+
+      &:first-of-type{
+        padding-left: 0;
+        margin-left: 0;
+
+        &:before{
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-text{
+    margin-bottom: 30px;
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .popup__biography {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .popup__biography {
+
+    &-content {
+      padding: 0 80px 50px;
+    }
+
+    &-name{
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    &-text{
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .popup__biography {
+
+  }
+}
+@media (min-width: $desktop) {
+  .popup__biography {
+
+  }
+}
+

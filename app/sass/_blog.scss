@@ -1,0 +1,171 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__item{
+    max-width: 406px;
+    margin-bottom: 40px;
+    padding-bottom: 23px;
+    border-radius: 10px;
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,0.13);
+
+    &-article{
+      margin-bottom: 14px;
+      padding: 25px 25px 0 25px;
+      @include roboto;
+      font-size: 16px;
+      line-height: 24px;
+      overflow: hidden;
+
+      p{
+        margin-bottom: 14px;
+
+        &:last-of-type{
+          height: 50px;
+          margin-bottom: 0;
+
+          &:after{
+            display: inline-block;
+            margin-left: -3px;
+            content: '...';
+          }
+
+        }
+
+      }
+
+      dt{
+        color: #F15C22;
+      }
+
+      dt{
+        min-height: 73px;
+        margin-bottom: 15px;
+        @include quicksand;
+        font-size: 22px;
+        font-weight: bold;
+
+        a{
+          text-decoration: none;
+          color: #F15C22;
+        }
+
+      }
+
+      a{
+        color: #000;
+        text-decoration: underline;
+      }
+
+    }
+
+    &-picture{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 211px;
+      margin-bottom: 24px;
+      overflow: hidden;
+
+      img{
+        display: block;
+        width: 100%;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .blog {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .blog {
+
+    &__item{
+
+      &-article{
+        padding: 29px 35px 0 40px;
+        font-size: 18px;
+
+        dt{
+          font-size: 26px;
+          line-height: 33px;
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .blog {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-content: stretch;
+      width: 48%;
+
+      & > * {
+        width: 100%;
+      }
+
+      &-article{
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        flex: 1;
+
+        & > * {
+          width: 100%;
+        }
+
+        dt{
+          flex: 1;
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .blog {
+
+    &__item{
+      transition: box-shadow .3s ease;
+
+      &:hover{
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0,.15);
+      }
+
+      &-article{
+
+        a{
+          transition: color .3s ease;
+
+          &:hover{
+            color: #F15C22;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+

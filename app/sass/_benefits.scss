@@ -1,0 +1,166 @@
+.benefits {
+  position: relative;
+  padding: 147px 25px;
+
+  &  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title{
+    margin-bottom: 30px;
+    text-align: center;
+
+    h2{
+      margin-bottom: 27px;
+      color: #F15C22;
+      @include quicksand;
+      font-size: 30px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    dd{
+      @include roboto;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+  }
+
+  &__item{
+    position: relative;
+    margin: 0 11px 21px;
+    padding: 0 4px 13px;
+    @include quicksand;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+
+    &:after{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border: 1px solid #F15C22;
+      opacity: 0;
+      transition: opacity .3s ease;
+      content: '';
+    }
+
+    &.active:after{
+      opacity: 1;
+    }
+
+  }
+
+  &__content{
+    @include roboto;
+    font-size: 18px;
+    line-height: 24px;
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    li{
+      position: relative;
+      margin: 0 2% 30px;
+      padding-left: 24px;
+
+      &:before{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: #F15C22;
+        content: '';
+      }
+
+    }
+
+  }
+
+  &__background{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    min-width: 1440px;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .benefits {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .benefits {
+
+    &__title{
+      max-width: 778px;
+      margin: 0 auto 44px;
+
+      h2{
+        font-size: 50px;
+        line-height: 1;
+      }
+
+      dd{
+        @include roboto;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+    }
+
+    &__wrap{
+      max-width: 885px;
+      margin: 0 auto;
+    }
+
+    &__item{
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__content{
+
+      li{
+        margin-bottom: 39px;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .benefits {
+
+  }
+}
+@media (min-width: $desktop) {
+  .benefits {
+
+    &__item{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #F15C22;
+      }
+
+    }
+
+  }
+}
+

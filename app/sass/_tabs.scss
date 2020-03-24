@@ -1,0 +1,72 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: padding-bottom .3s ease;
+
+  &__item{
+    margin-bottom: 30px;
+    padding-bottom: 13px;
+
+    &.active{
+      pointer-events: none;
+
+      & + dd {
+        opacity: 1;
+        visibility: visible;
+      }
+
+    }
+
+  }
+
+  dd{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .tabs {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .tabs {
+
+    &__item{
+      margin-bottom: 60px;
+    }
+
+    dd {
+      top: 99px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .tabs {
+
+  }
+}
+@media (min-width: $desktop) {
+  .tabs {
+
+    &__item{
+      cursor: pointer;
+
+      &:hover{
+
+      }
+
+    }
+
+  }
+}
+

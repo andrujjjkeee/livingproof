@@ -1,0 +1,234 @@
+.popup__meet {
+
+  &-content{
+    width: 100%;
+    max-width: 670px;
+    padding: 0 25px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  &-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 95px;
+    top: -37px;
+    height: 95px;
+    margin: 0 auto -13px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+
+  }
+
+  &-title{
+    margin-bottom: 11px;
+    @include quicksand;
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: bold;
+  }
+
+  &-text{
+    margin-bottom: 56px;
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+      width: 100%;
+    }
+
+    .wpcf7-validation-errors,
+    .wpcf7-spam-blocked,
+    .wpcf7-mail-sent-ok{
+      display: none!important;
+    }
+
+    .wpcf7-not-valid{
+      border-color: #FF798A;
+    }
+
+    span.wpcf7-not-valid-tip{
+      position: absolute;
+      top: calc( 100% - 20px );
+      left: 0;
+      @include roboto;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FF798A;
+      text-align: left;
+    }
+
+    input{
+      width: 100%;
+      height: 37px;
+      margin-bottom: 24px;
+      padding: 0 20px;
+      border: 1px solid #F15C22;
+      border-radius: 25px;
+      color: #000;
+      @include roboto;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: .5px;
+    }
+
+    button{
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      padding: 0 33px;
+      border: 2px solid #f15c22;
+      border-radius: 50px;
+      background-color: #f15c22;
+      @include quicksand;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+      text-align: center;
+      transition: background-color .3s ease;
+    }
+
+  }
+
+  .preload-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgba(255,255,255,.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    &.is-show{
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .popup__meet {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .popup__meet {
+
+    $form-height: 53px;
+
+    &-content{
+      padding: 0 80px 82px;
+    }
+
+    &-title{
+      font-size: 36px;
+      line-height: 47px;
+    }
+
+    &-text{
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    form{
+      position: relative;
+      width: 434px;
+      height: $form-height;
+      margin: 0 auto;
+
+      span{
+        display: block;
+      }
+
+      input{
+        height: $form-height;
+        margin-bottom: 0;
+        padding: 0 205px 0 28px;
+        font-size: 18px;
+      }
+
+      button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding: 0 47px;
+        font-size: 18px;
+      }
+
+      span.wpcf7-not-valid-tip{
+        left: 28px;
+      }
+
+      span.wpcf7-not-valid-tip{
+        top: calc( 100% + 5px );
+        left: 26px;
+        text-align: left;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .popup__meet {
+
+  }
+}
+@media (min-width: $desktop) {
+  .popup__meet {
+
+    form button{
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: rgba(241,92,34,.5) solid 6px;
+        border-radius: inherit;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+      }
+
+      &:hover {
+
+        &:before{
+          -webkit-animation-name: hvr-ripple-out;
+          animation-name: hvr-ripple-out;
+        }
+
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,148 @@
+.hero-media {
+  height: 195px;
+  margin-bottom: 1px;
+
+  &__layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 320px;
+    height: inherit;
+    padding: 25px 15px;
+  }
+
+  &__title{
+    margin-bottom: 18px;
+    color: #f15c22;
+    white-space: nowrap;
+    font-family: "Quicksand", sans-serif;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  &__text{
+    max-width: 220px;
+    margin-left: 5px;
+    @include roboto;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  &__background{
+    display: none;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .hero-media {
+
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-media {
+    background: url(../img/hero-media-mobile.jpg) no-repeat no-repeat 50% 100%;
+    background-size: 100% auto;
+  }
+}
+@media (max-width: 536px) {
+  .hero-media {
+    background-position: 100% -66px;
+    background-size: 100% auto;
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .hero-media {
+    position: relative;
+    height: 335px;
+    margin-bottom: 56px;
+
+    &__layout{
+      width: 100%;
+      max-width: 1154px;
+      margin: 0 auto;
+      padding-top: 135px;
+      padding-bottom: 8px;
+    }
+
+    &__title{
+      font-size: 85px;
+      line-height: 106px;
+    }
+
+    &__text{
+      max-width: 355px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      min-width: 1440px;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+
+      img{
+        margin-top: -146px;
+      }
+
+      svg{
+        position: absolute;
+        top: 106px;
+        left: 0;
+        z-index: 2;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero-media {
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero-media {
+    height: 3.35em;
+    min-height: 335px;
+    margin-bottom: .56em;
+
+    &__layout{
+      padding-top: 1.35em;
+      padding-bottom: .08em;
+    }
+
+    &__title {
+      margin-bottom: .21em;
+      line-height: 1.06em;
+    }
+
+    &__background {
+
+      img{
+        margin-top: -1.46em;
+      }
+
+      svg{
+        top: 1.06em;
+      }
+
+    }
+
+  }
+}

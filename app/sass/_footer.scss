@@ -1,0 +1,93 @@
+.footer {
+
+  &__address{
+    max-width: 160px;
+    margin: 9px auto 19px;
+    @include roboto;
+    font-size: 16px;
+    line-height: 18px;
+    font-style: normal;
+
+    a{
+      color: #595959;
+    }
+
+    br{
+      display: none;
+    }
+
+  }
+
+  &__contact{
+    display: flex;
+
+    flex-direction: column;
+    margin-bottom: 44px;
+    text-align: center;
+  }
+
+  &__phone{
+    margin-bottom: 9px;
+    color: #f15c22;
+    @include quicksand;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__main{
+    color: #000;
+    @include roboto;
+    font-size: 16px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .footer {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .footer {
+
+    &__address {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .footer {
+
+    &__contact{
+      align-items: flex-end;
+      position: absolute;
+      right: 15px;
+      bottom: 49px;
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    &__social{
+      position: absolute;
+      bottom: 72px;
+      left: 15px;
+    }
+
+    &__main{
+      font-size: 16px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .footer {
+
+    &__phone,
+    &__main{
+      cursor: text;
+    }
+
+  }
+}

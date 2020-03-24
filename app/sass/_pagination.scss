@@ -1,0 +1,134 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 19px;
+
+  .screen-reader-text{
+    display: none;
+  }
+
+  .nav-links{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 71px;
+  }
+
+  .page-numbers{
+    margin: 0 20px;
+    @include quicksand;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #000;
+
+    &.current{
+      color: #F15C22;
+      font-size: 30px;
+      line-height: 38px;
+      pointer-events: none;
+    }
+
+  }
+
+  .next, .prev{
+    position: absolute;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    background: url("../img/icon-arrow-white.svg") no-repeat center;
+    background-size: cover;
+    text-indent: 9999px;
+
+    &:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/icon-arrow.svg") no-repeat center;
+      background-size: cover;
+      content: '';
+    }
+
+  }
+
+  .next{
+    right: 0;
+    margin-right: 0;
+    transform: translateY(-50%);
+  }
+
+  .prev{
+    left: 0;
+    margin-left: 0;
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .next svg, .prev svg{
+    display: block;
+    width: 52px;
+    height: 52px;
+
+    path{
+      fill: #F15C22;
+    }
+
+    circle{
+      fill: #fff;
+      stroke: #F15C22;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .pagination {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .pagination {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .pagination {
+
+  }
+}
+@media (min-width: $desktop) {
+  .pagination {
+
+    .page-numbers{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #F15C22;
+      }
+
+    }
+
+    .next, .prev{
+      transition: background-color .3s ease;
+
+      &:before{
+        transition: opacity .3s ease;
+      }
+
+      &:hover{
+        background-color: #F15C22;
+
+        &:before{
+          opacity: 0;
+        }
+
+      }
+
+    }
+
+  }
+}
+

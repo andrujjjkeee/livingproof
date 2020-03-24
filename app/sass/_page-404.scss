@@ -1,0 +1,45 @@
+.page-404 {
+  margin: -29px auto 51px;
+  padding: 0 25px;
+
+  div{
+    text-align: center;
+
+    &:first-child{
+      margin-bottom: 10px;
+      @include quicksand;
+      font-weight: bold;
+      font-size: 85px;
+      line-height: 106px;
+    }
+
+    &:last-child{
+      @include roboto;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .page-404 {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .page-404 {
+    margin: -29px auto 181px;
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .page-404 {
+
+  }
+}
+@media (min-width: $desktop) {
+  .page-404 {
+
+  }
+}

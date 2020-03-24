@@ -1,0 +1,117 @@
+@media (max-width: 767px) {
+  .hero-pricing {
+    background: url(../img/hero-pricing-mobile.jpg) no-repeat 31% -57px;
+    background-size: 768px auto;
+  }
+}
+
+.hero-pricing {
+  height: 195px;
+  margin-bottom: 1px;
+
+  &__layout{
+    display: flex;
+    align-items: flex-end;
+    width: 320px;
+    height: inherit;
+    padding: 25px;
+  }
+
+  &__title{
+    color: #f15c22;
+    white-space: nowrap;
+    font-family: "Quicksand", sans-serif;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  &__background{
+    display: none;
+  }
+
+}
+@media (min-width: $tablet-portrait) {
+  .hero-pricing {
+    position: relative;
+    height: 398px;
+    overflow: hidden;
+
+    &__layout{
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+      padding-top: 135px;
+      padding-bottom: 8px;
+    }
+
+    &__title{
+      font-size: 85px;
+      line-height: 106px;
+    }
+
+    &__background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      min-width: 1440px;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+
+      img{
+        margin-top: -140px;
+      }
+
+      svg{
+        position: absolute;
+        bottom: -331px;
+        left: 0;
+        z-index: 2;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero-pricing {
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero-pricing {
+    height: 3.98em;
+
+    &__layout{
+      padding-top: 1.35em;
+      padding-bottom: .08em;
+    }
+
+    &__title {
+      line-height: 1.06em;
+    }
+
+    &__background {
+
+      img{
+        margin-top: -1.4em;
+      }
+
+      svg{
+        bottom: -3.31em;
+      }
+
+    }
+
+  }
+}

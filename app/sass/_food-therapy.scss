@@ -1,0 +1,137 @@
+.food-therapy {
+  margin-bottom: 65px;
+  padding: 0 25px;
+
+  h2{
+    margin-bottom: 30px;
+    color: #F15C22;
+    @include quicksand;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__wrap{
+    position: relative;
+    z-index: 1;
+  }
+
+  &__picture{
+    max-width: 314px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.33);
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  &__text{
+    margin-bottom: 30px;
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+
+    > div > p{
+      margin-bottom: 26px;
+
+      &:first-child{
+        @include quicksand;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+      }
+
+    }
+
+    blockquote{
+      max-width: 266px;
+      margin: 0 0 22px 8px;
+      padding: 3px 0 4px 16px;
+      border-left: 1px solid #f1622a;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 600;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .food-therapy {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .food-therapy {
+
+    h2{
+      margin: 0 auto 54px;
+      font-size: 50px;
+      line-height: 50px;
+      letter-spacing: .1px;
+    }
+
+    &__wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__picture{
+      margin: 0;
+      order: 1;
+    }
+
+    &__text{
+      width: calc( 100% - 374px);
+      margin: -6px 0 0;
+      font-size: 18px;
+      line-height: 24px;
+      order: 2;
+
+      > div > p{
+
+        &:first-child{
+          font-size: 30px;
+          line-height: 36px;
+          max-width: 85%;
+        }
+
+      }
+
+      blockquote{
+        max-width: 500px;
+        margin: 29px 0 24px 21px;
+        padding-left: 37px;
+        border-width: 2px;
+      }
+
+      & > div{
+        margin-bottom: 50px;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .food-therapy {
+    margin-bottom: 127px;
+
+    &__wrap{
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .food-therapy {
+
+  }
+}
+

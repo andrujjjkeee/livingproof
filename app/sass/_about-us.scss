@@ -1,0 +1,153 @@
+.about-us {
+  padding: 0 25px;
+  @include roboto;
+  font-size: 16px;
+  line-height: 22px;
+
+  h1{
+    margin-bottom: 20px;
+    @include quicksand;
+    color: #F15C22;
+    font-size: 45px;
+    line-height: 1;
+  }
+
+  p{
+    max-width: 405px;
+    margin-bottom: 25px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__content{
+    max-width: 540px;
+    margin-bottom: 60px;
+  }
+
+  &__goals{
+
+    dl{
+      margin-bottom: 60px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+    }
+
+    dt{
+      margin-bottom: 38px;
+      @include quicksand;
+      font-size: 30px;
+      line-height: 1;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &-text{
+      @include roboto;
+      font-size: 16px;
+      line-height: 22px;
+
+      p:last-of-type{
+        margin-bottom: 20px;
+      }
+
+    }
+
+    &-pic{
+      max-width: 331px;
+      margin: 0 auto 30px;
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.33);
+
+      img{
+        display: block;
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  &_2{
+    margin-bottom: 60px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .about-us {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .about-us {
+    max-width: 854px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+
+    h1{
+      font-size: 85px;
+      line-height: 84px;
+    }
+
+    &__content{
+      margin-bottom: 80px;
+    }
+
+    &__goals{
+
+      dl{
+        margin-bottom: 82px;
+      }
+
+      dt{
+        font-size: 50px;
+        line-height: 1;
+        text-align: left;
+      }
+
+      dd{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-pic{
+        margin: 0;
+      }
+
+      &-text{
+        width: calc( 100% - 391px );
+        font-size: 18px;
+        line-height: 24px;
+
+        a{
+          margin: 0;
+        }
+
+      }
+
+    }
+
+    &_2{
+      margin-bottom: 109px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .about-us {
+
+  }
+}
+@media (min-width: $desktop) {
+  .about-us {
+
+  }
+}
+

@@ -1,0 +1,192 @@
+@media (max-width: 767px) {
+  .healthy-metabolism {
+    background: url(../img/healthy-metabolism-background-mobile.jpg) no-repeat center center;
+    background-size: auto 100%;
+  }
+}
+
+.healthy-metabolism {
+  margin-bottom: 60px;
+  padding: 120px 25px 69px;
+
+  &__text{
+    color: #fff;
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+
+    h2{
+      margin-bottom: 20px;
+      color: #F15C22;
+      @include quicksand;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    p{
+      margin-bottom: 19px;
+
+      &:first-of-type{
+        max-width: 90%;
+        @include quicksand;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+      }
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+    }
+
+    ul{
+      margin-top: 22px;
+      @include quicksand;
+      font-weight: bold;
+
+      li{
+        position: relative;
+        margin-bottom: 19px;
+        padding-left: 17px;
+
+        &:before {
+          position: absolute;
+          top: 10px;
+          left: 0;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          box-sizing: border-box;
+          background-color: #F15C22;
+          content: '';
+        }
+
+      }
+
+    }
+
+  }
+
+  &__background {
+    display: none;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .healthy-metabolism {
+    
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .healthy-metabolism {
+    position: relative;
+    margin: -65px 0 90px;
+    padding: 229px 25px 192px;
+    background: transparent;
+
+    &__text{
+      max-width: 805px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 24px;
+
+      h2{
+        max-width: 85%;
+        margin: 0 auto 46px;
+        font-size: 50px;
+        line-height: 50px;
+      }
+
+      p{
+
+        &:first-of-type{
+          font-size: 30px;
+          line-height: 38px;
+        }
+
+      }
+
+    }
+
+    &__background{
+      display: block;
+      position: absolute;
+      top: -168px;
+      left: 50%;
+      width: 100%;
+      min-width: 1250px;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+
+      svg{
+        position: absolute;
+        left: 0;
+        z-index: 2;
+
+        &:first-child{
+          top: -235px;
+        }
+
+        &:last-child{
+          top: calc( 100% - 126px );
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .healthy-metabolism {
+
+  }
+}
+@media (min-width: $desktop) {
+  .healthy-metabolism {
+    margin: -.65em 0 .9em;
+    padding-top: 2.29em;
+    padding-bottom: 1.92em;
+
+    &__background{
+      max-height: 1250px;
+      top: -1.68em;
+
+      &:before{
+        width: 10.23em;
+        height: 10.23em;
+      }
+
+      svg{
+
+        &:first-child{
+          top: -2.35em;
+        }
+
+        &:last-child{
+          top: calc( 100% - 1.26em );
+        }
+
+      }
+
+    }
+
+  }
+}

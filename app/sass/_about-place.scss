@@ -1,0 +1,159 @@
+@media (max-width: 767px) {
+  .about-place {
+    background: url(../img/about-place-background-mobile.jpg) no-repeat center center;
+    background-size: auto 100%;
+  }
+}
+.about-place {
+  padding: 74px 25px 150px;
+
+  &__text{
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+
+    h3{
+      margin-bottom: 20px;
+      @include quicksand;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    p{
+      margin-bottom: 24px;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+  &__background {
+    display: none;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .about-place {
+    
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .about-place {
+    position: relative;
+    padding: 255px 25px 192px;
+    background: transparent;
+
+    &__text{
+      max-width: 805px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 24px;
+
+      h3{
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+    }
+
+    &__background{
+      display: block;
+      position: absolute;
+      top: -245px;
+      left: 50%;
+      width: 100%;
+      min-width: 1440px;
+      transform: translateX(-50%) translateZ(0);
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+
+      &:before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1023px;
+        height: 1023px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        transform: translate(-50%, -22%);
+        box-sizing: border-box;
+        z-index: 1;
+        content: '';
+      }
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+
+      svg{
+        position: absolute;
+        left: 0;
+        z-index: 2;
+
+        &:first-child{
+          top: -158px;
+        }
+
+        &:last-child{
+          bottom: -192px;
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .about-place {
+
+  }
+}
+@media (min-width: $desktop) {
+  .about-place {
+    padding-top: 2.55em;
+    padding-bottom: 1.92em;
+
+    &__background{
+      min-width: 1300px;
+      top: calc( 50% - 1.5em );
+      transform: translate(-50%, -50%) translateZ(0);
+
+      &:before{
+        width: 10.23em;
+        height: 10.23em;
+      }
+
+      svg{
+
+        &:first-child{
+          top: -1.58em;
+        }
+
+        &:last-child{
+          bottom: -1.92em;
+        }
+
+      }
+
+      img{
+        position: relative;
+        top: -.45em;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,123 @@
+.header {
+
+  &__link{
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    color: #000;
+    @include roboto;
+    font-size: 16px;
+    line-height: 12px;
+  }
+
+  &__social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .social{
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__contact{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__phone{
+    margin-bottom: 9px;
+    color: #f15c22;
+    @include quicksand;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__main{
+    color: #000;
+    @include roboto;
+    font-size: 16px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .header {
+
+    &__contact{
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      margin-bottom: 0;
+      width: auto!important;
+    }
+
+    &__social {
+      align-items: flex-start;
+    }
+
+    &__phone{
+      margin-bottom: 20px;
+    }
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .header {
+
+    &__contact{
+      bottom: 25px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .header {
+
+    &__contact{
+      align-items: flex-end;
+      right: -2px;
+      bottom: 48px;
+      text-align: right;
+    }
+
+    &__social{
+      position: absolute;
+      bottom: 46px;
+      left: -2px;
+      text-align: left;
+
+      .social{
+        margin-bottom: 9px;
+      }
+
+    }
+
+    &__phone {
+      margin-bottom: 9px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .header {
+
+    &__link{
+      transition: border-bottom-color .3s ease, color .3s ease;
+
+      &:hover{
+        color: #f15c22;
+        border-bottom-color: #f15c22;
+      }
+
+    }
+
+    &__phone,
+    &__main{
+      cursor: text;
+    }
+
+  }
+}

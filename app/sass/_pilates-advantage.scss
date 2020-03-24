@@ -1,0 +1,105 @@
+.pilates-advantage {
+  padding: 0 25px;
+  @include roboto;
+  font-size: 16px;
+  line-height: 22px;
+
+  dl{
+    margin-bottom: 60px;
+
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+
+  }
+
+  dt{
+    margin-bottom: 38px;
+    @include quicksand;
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text{
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+
+    p:last-of-type{
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__pic{
+    max-width: 331px;
+    margin: 0 auto 30px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.33);
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .pilates-advantage {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .pilates-advantage {
+    max-width: 854px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+
+    dl{
+      margin-bottom: 82px;
+    }
+
+    dt{
+      font-size: 50px;
+      line-height: 1;
+      text-align: left;
+    }
+
+    dd{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__pic{
+      margin: 0;
+    }
+
+    &__text{
+      width: calc( 100% - 391px );
+      font-size: 18px;
+      line-height: 24px;
+
+      a{
+        margin: 0;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .pilates-advantage {
+
+  }
+}
+@media (min-width: $desktop) {
+  .pilates-advantage {
+
+  }
+}
+

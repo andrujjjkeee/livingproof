@@ -1,0 +1,44 @@
+.blog-article-info {
+  margin-bottom: 60px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0,0,0,.5);
+  border-bottom: 1px solid rgba(0,0,0,.5);
+
+  & > *:first-child{
+    margin-bottom: 25px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .blog-article-info {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .blog-article-info {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .social{
+      margin: 11px 0 0;
+    }
+
+    .blog-tags{
+      max-width: 75%;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .blog-article-info {
+
+  }
+}
+@media (min-width: $desktop) {
+  .blog-article-info {
+
+  }
+}
+

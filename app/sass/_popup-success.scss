@@ -1,0 +1,60 @@
+.popup__success {
+
+  &-content {
+    width: 100%;
+    max-width: 670px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    background-color: #fff;
+    @include roboto;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    transition: opacity .3s ease;
+
+    p{
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &-title{
+    margin-bottom: 7px;
+    @include quicksand;
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: bold;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .popup__success {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .popup__success {
+
+    &-title{
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    &-content {
+      padding: 50px 80px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .popup__success {
+
+  }
+}
+@media (min-width: $desktop) {
+  .popup__success {
+
+  }
+}

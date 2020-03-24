@@ -1,0 +1,48 @@
+.popup__schedule-frame {
+  width: 100%;
+  max-width: 670px;
+
+  &-content{
+    width: 100%;
+    height: calc( 100vh - 130px );
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+  }
+
+  iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .popup__schedule-frame {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .popup__schedule-frame {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .popup__schedule-frame {
+
+  }
+}
+@media (min-width: $desktop) {
+  .popup__schedule-frame {
+
+    &-content{
+      overflow-y: hidden;
+      height: calc( 100vh - 85px );
+    }
+
+  }
+}

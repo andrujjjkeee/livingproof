@@ -1,0 +1,36 @@
+.video-content {
+  width: calc( 100% - 30px );
+  margin: 0 auto 60px;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,.33);
+  overflow: hidden;
+
+  iframe{
+    display: block;
+    width: 100%;
+    transform: translateZ(0);
+    overflow: hidden;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .video-content {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .video-content {
+    margin-bottom: 108px;
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .video-content {
+    max-width: 1150px;
+    margin: 0 auto 108px;
+  }
+}
+@media (min-width: $desktop) {
+  .video-content {
+
+  }
+}
+
